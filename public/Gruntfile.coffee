@@ -10,8 +10,8 @@ module.exports = (grunt) ->
 			build: {
 				# src: 'js/<%= pkg.name %>.js',
 				# dest: 'js/<%= pkg.name %>.min.js'
-				src: 'js/*.js',
-				dest: 'js/operaciones.min.js'
+				src: 'javascripts/*.js',
+				dest: 'javascripts/operaciones.min.js'
 			}
 		}
 
@@ -27,7 +27,7 @@ module.exports = (grunt) ->
 				expand: true,
 				cwd: 'coffeescript/',
 				src: ['**/*.coffee'],
-				dest: 'js/',
+				dest: 'javascripts/',
 				ext: '.js'
 			}
 		}

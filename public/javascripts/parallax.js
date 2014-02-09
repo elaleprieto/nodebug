@@ -29,7 +29,7 @@ $(document).ready(function() {
       
 
 	$('.colorSelector').each(function(index, element) {
-		actualizarValores(element, hexToRgb($(element).val()));
+		$(this).val(rgb2hex($(this).val()));
 		$(this).miniColors({
 			change : function(hex, rgb) {
 				$(element).css('backgroundColor', '#' + hex);
@@ -60,14 +60,15 @@ $(document).ready(function() {
  */
 function cambiarColor(elemento, rgb) {
 	var elementoId = $(elemento).attr('id');
-	$.post(WEBROOT + "bichitos/colorin", {
-				id : elementoId,
-				color: rgb
-			}, function() {
-				actualizarValores(elemento, rgb);
-				window.broadcastChange(elementoId, rgb);
-			}
-	);
+	// $.post(WEBROOT + "bichitos/colorin", {
+	// 			id : elementoId,
+	// 			color: rgb
+	// 		}, function() {
+	// 			actualizarValores(elemento, rgb);
+	// 			window.broadcastChange(elementoId, rgb);
+	// 		}
+	// );
+	window.colorChange(elementoId, rgb);
 }
 
 /**
@@ -125,14 +126,6 @@ function actualizarValores(elemento, rgb) {
 		lienzo.fill();
 }
 
-// function rgb2hex(rgb){
- // rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
- // return "#" +
-  // ("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
-  // ("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
-  // ("0" + parseInt(rgb[3],10).toString(16)).slice(-2);
-// }
-
 function hexToRgb(h) {
     // var r = parseInt((cutHex(h)).substring(0,2),16);
     // var g = ((cutHex(h)).substring(2, 4), 16);
@@ -143,4 +136,12 @@ function hexToRgb(h) {
 
 function cutHex(h) {
 	return (h.charAt(0)=="#") ? h.substring(1,7) : h;
+}
+
+function rgb2hex(rgb){
+	rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+	return "#" +
+		("0" + parseInt(rgb[1],10).toString(16)).slice(-2) +
+		("0" + parseInt(rgb[2],10).toString(16)).slice(-2) +
+		("0" + parseInt(rgb[3],10).toString(16)).slice(-2);
 }
