@@ -1,0 +1,247 @@
+/* line 35, ../sass/parallax.sass */
+.back .middlefront {
+  background: url("../images/cele/iconosgrande1.png") no-repeat;
+  height: 2500px;
+  margin-left: 370px;
+  position: absolute;
+  width: 920px;
+  margin-top: 2000px;
+}
+/* line 39, ../sass/parallax.sass */
+.back .middleback {
+  background: url("../images/cele/iconosgrande2.png") no-repeat;
+  height: 2500px;
+  margin-left: 375px;
+  position: absolute;
+  width: 920px;
+  margin-top: 30px;
+}
+/* line 43, ../sass/parallax.sass */
+.back .middleback .middlefront {
+  background: url("../images/cele/iconosgrande1.png") no-repeat;
+  height: 4000px;
+  margin-left: 10px;
+  position: absolute;
+  width: 915px;
+  margin-bottom: 200px;
+}
+
+/* line 47, ../sass/parallax.sass */
+.columna {
+  padding-left: 730px;
+  position: absolute;
+  width: 60px;
+}
+
+/* line 52, ../sass/parallax.sass */
+.header_parallax {
+  background: none;
+}
+
+/* line 55, ../sass/parallax.sass */
+.nav-item {
+  position: relative;
+  width: 300px;
+  background: none;
+}
+
+/* line 60, ../sass/parallax.sass */
+.menu_parallax {
+  background: none;
+}
+
+/* line 63, ../sass/parallax.sass */
+.nav_a_parallax {
+  cursor: pointer;
+  display: block;
+  background: none;
+  width: 30px;
+}
+
+/* line 70, ../sass/parallax.sass */
+#acuarela {
+  padding-left: 80px;
+  padding-top: 170px;
+  position: absolute;
+  width: 320px;
+}
+
+/* line 76, ../sass/parallax.sass */
+#antena {
+  height: 500px;
+  padding-left: 40px;
+  position: absolute;
+  width: 350px;
+}
+
+/* line 79, ../sass/parallax.sass */
+#antena2 {
+  height: 150px;
+  padding-left: 200px;
+  position: absolute;
+  width: 160px;
+}
+
+/* line 82, ../sass/parallax.sass */
+#body_parallax {
+  background: url("../images/cele/fondo.jpg") repeat fixed 0 0;
+}
+
+/* line 85, ../sass/parallax.sass */
+#colorido1 {
+  position: absolute;
+  margin-left: 530px;
+  margin-top: 460px;
+}
+
+/* line 88, ../sass/parallax.sass */
+#colorido2 {
+  position: absolute;
+  margin-left: 570px;
+  margin-top: 1575px;
+}
+
+/* line 91, ../sass/parallax.sass */
+#colorido3 {
+  position: absolute;
+  margin-left: 820px;
+  margin-top: 2675px;
+}
+
+/* line 94, ../sass/parallax.sass */
+#colorido4 {
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 3740px;
+}
+
+/* line 97, ../sass/parallax.sass */
+#content_parallax {
+  height: 100%;
+  margin: 0 0 0 460px;
+  margin-top: 50px;
+  padding-top: 0px;
+  top: 0;
+  width: 800px;
+  position: absolute;
+}
+
+/* line 106, ../sass/parallax.sass */
+#cuadradoColor {
+  height: 125px;
+  width: 150px;
+}
+
+/* line 110, ../sass/parallax.sass */
+#cuadradoColor3 {
+  height: 125px;
+  padding-left: 50px;
+  position: relative;
+  width: 150px;
+}
+
+/* line 116, ../sass/parallax.sass */
+#culturaLibre, #disenio {
+  display: block;
+  height: 1000px;
+  padding-top: 10px;
+  position: relative;
+}
+
+/* line 119, ../sass/parallax.sass */
+#electronica, #sistemas {
+  display: block;
+  height: 1000px;
+  padding-top: 80px;
+  position: relative;
+}
+
+/* line 122, ../sass/parallax.sass */
+#estructura {
+  height: 430px;
+  padding-left: 300px;
+  padding-top: 60px;
+  position: absolute;
+  width: 200px;
+}
+
+/* line 125, ../sass/parallax.sass */
+#estructura2 {
+  height: 430px;
+  padding-left: 345px;
+  padding-top: 105px;
+  position: absolute;
+  width: 200px;
+}
+
+/* line 128, ../sass/parallax.sass */
+#estructura3 {
+  height: 430px;
+  padding-left: 1px;
+  padding-top: 60px;
+  position: absolute;
+  width: 200px;
+}
+
+/* line 131, ../sass/parallax.sass */
+#estructura4 {
+  height: 430px;
+  padding-left: 280px;
+  padding-top: 60px;
+  position: absolute;
+  width: 200px;
+}
+
+/* line 134, ../sass/parallax.sass */
+#herramientas {
+  height: 436.5px;
+  padding-top: 60px;
+  width: 150px;
+}
+
+/* line 139, ../sass/parallax.sass */
+#lienzo1, #lienzo2, #lienzo3, #lienzo4 {
+  position: absolute;
+}
+
+/* line 142, ../sass/parallax.sass */
+#lineas {
+  padding-left: 130px;
+  padding-top: 300px;
+  width: 220px;
+}
+
+/* line 147, ../sass/parallax.sass */
+#lineasOtroLado {
+  padding-top: 320px;
+  padding-left: 190px;
+  width: 220px;
+  position: absolute;
+}
+
+/* line 153, ../sass/parallax.sass */
+#nav-logo {
+  display: block;
+  float: left;
+  margin: 20px 0 0 50px;
+  background: none;
+}
+
+/* line 159, ../sass/parallax.sass */
+#nav_parallax {
+  background: url("../images/cele/menu.png") repeat-y 0 0 transparent;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 350px;
+  margin-top: 82px;
+}
+
+/* line 167, ../sass/parallax.sass */
+#ul_parallax {
+  top: 280px;
+  display: block;
+  position: absolute;
+  background: none;
+  padding-left: 30px;
+}

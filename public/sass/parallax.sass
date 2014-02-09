@@ -1,0 +1,172 @@
+// Mixins
+=antena($height, $paddingLeft, $width)
+	height: $height
+	padding-left: $paddingLeft
+	position: absolute
+	width: $width
+
+=colorido($marginLeft, $marginTop)
+	position: absolute
+	margin-left: $marginLeft
+	margin-top: $marginTop
+
+=estructura($paddingLeft, $paddingTop)
+	height: 430px
+	padding-left: $paddingLeft
+	padding-top: $paddingTop
+	position: absolute
+	width: 200px
+
+=estructuras($paddingTop: 80px)
+	display: block
+	height: 1000px
+	padding-top: $paddingTop
+	position: relative
+
+=middle($image, $height, $marginLeft, $width)
+	background: url("../images/cele/#{$image}.png") no-repeat
+	height: $height
+	margin-left: $marginLeft
+	position: absolute
+	width: $width
+
+
+.back
+	.middlefront
+		+middle(iconosgrande1, 2500px, 370px, 920px)
+		margin-top: 2000px
+
+	.middleback
+		+middle(iconosgrande2, 2500px, 375px, 920px)
+		margin-top: 30px
+
+		.middlefront
+			+middle(iconosgrande1, 4000px, 10px, 915px)
+			margin-bottom: 200px
+
+.columna
+	padding-left: 730px
+	position: absolute
+	width: 60px
+
+.header_parallax
+	background: none
+
+.nav-item
+	position: relative
+	width: 300px
+	background: none
+
+.menu_parallax
+	background: none
+
+.nav_a_parallax
+	cursor: pointer
+	display: block
+	background: none
+	width: 30px
+
+
+#acuarela
+	padding-left: 80px
+	padding-top: 170px
+	position: absolute
+	width: 320px
+
+#antena
+	+antena(500px, 40px, 350px)
+
+#antena2
+	+antena(150px, 200px, 160px)
+
+#body_parallax
+	background: url("../images/cele/fondo.jpg") repeat fixed 0 0
+
+#colorido1
+	+colorido(530px, 460px)
+
+#colorido2
+	+colorido(570px, 1575px)
+
+#colorido3
+	+colorido(820px, 2675px)
+
+#colorido4
+	+colorido(650px, 3740px)
+
+#content_parallax
+	height: 100%
+	margin: 0 0 0 460px
+	margin-top: 50px
+	padding-top: 0px
+	top: 0
+	width: 800px
+	position: absolute
+
+#cuadradoColor
+	height: 125px
+	width: 150px
+
+#cuadradoColor3
+	height: 125px
+	padding-left: 50px
+	position: relative
+	width: 150px
+
+#culturaLibre, #disenio
+	+estructuras(10px)
+
+#electronica, #sistemas
+	+estructuras
+
+#estructura
+	+estructura(300px, 60px)
+
+#estructura2
+	+estructura(345px, 105px)
+
+#estructura3
+	+estructura(1px, 60px)
+
+#estructura4
+	+estructura(280px, 60px)
+
+#herramientas
+	height: 436.5px
+	padding-top: 60px
+	width: 150px
+
+#lienzo1, #lienzo2, #lienzo3, #lienzo4
+	position: absolute
+
+#lineas
+	padding-left: 130px
+	padding-top: 300px
+	width: 220px
+
+#lineasOtroLado
+	padding-top: 320px
+	padding-left: 190px
+	width: 220px
+	position: absolute
+
+#nav-logo
+	display: block
+	float: left
+	margin: 20px 0 0 50px
+	background: none
+
+#nav_parallax
+	background: url("../images/cele/menu.png") repeat-y 0 0 transparent
+	height: 100%
+	overflow: hidden
+	position: fixed
+	width: 350px
+	margin-top: 82px
+
+#ul_parallax
+	top: 280px
+	display: block
+	position: absolute
+	background: none
+	padding-left: 30px

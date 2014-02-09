@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/cake.generic.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+		block css
+	body
+		header(style="position: fixed; z-index: 1").span2
+			div.inner.cf
+				h1.alt.span1.head
+					img(alt="bichiLogo", src="/images/bug128.png").bug
+					| Bichitos para Todos
+				nav.span1.col
+					ul.cf
+						li
+							a(href="/bichitos2.1/bichitos").alt
+								| Inicio
+						li
+							a(href="/bichitos2.1/accionar").alt
+								| Accionar
+						li
+							a(href="/bichitos2.1/colorear").alt
+								| Colorear
+						li
+							a(href="/bichitos2.1/direccionar").alt
+								| Direccionar
+						li
+							a(href="/bichitos2.1/parallax").alt
+								| Parallax
+
+		block content
+
+		block scripts

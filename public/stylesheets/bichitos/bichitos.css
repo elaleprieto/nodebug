@@ -1,0 +1,114 @@
+
+h1 {
+    color: #398235;
+    text-align: center;
+}
+h3 {
+    color: #398235;
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+fieldset {
+    border: 1px solid #CCCCCC;
+    margin-bottom: 1em;
+    padding: 16px 20px;
+}
+fieldset legend {
+    color: #398235;
+    font-size: 200%;
+    font-weight: bold;
+}
+a {
+    color: #155511;
+}
+a:hover {
+    color: #398235;
+}
+th {
+    color: #155511;
+    text-align: center;
+}
+table tr td {
+    text-align: center;
+}
+.head {
+    width: 48%;
+}
+#lampara {
+    text-align: center;
+}
+.lamparita {
+    cursor: pointer;
+    height: 50%;
+    width: 50%;
+}
+#loading {
+    display: none;
+    opacity: 0.2;
+    text-align: center;
+}
+.elefante {
+    height: 2%;
+    padding-right: 5px;
+    vertical-align: bottom;
+    width: 2%;
+}
+.bug {
+    height: 2%;
+    padding-right: 5px;
+    vertical-align: middle;
+    width: 6%;
+}
+footer > div > h1 {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 25px;
+}
+footer {
+    -moz-box-sizing: border-box;
+    bottom: 0;
+    position: fixed;
+    top: auto;
+    width: 100%;
+}
+#mensaje {
+    text-align: center;
+}
+.resaltar {
+    color: #FF0000;
+}
+.error {
+    color: #FF0000;
+}
+#formulario {
+    margin: 0 auto;
+}
+label {
+    color: #155511;
+    display: block;
+}
+.atributo {
+    color: #155511;
+    text-align: center;
+    width: 100%;
+}
+input:-moz-placeholder {
+    color: #CCCCCC;
+}
+div.atributo {
+    margin-bottom: 5%;
+}
+#boton_prender, #boton_apagar {
+    width: 49%;
+}
+.colorSelector {
+    background: url("/images/colorpicker/select2.png") repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}

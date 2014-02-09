@@ -1,0 +1,102 @@
+extends layout
+
+block css
+	//- link(rel='stylesheet', href='/stylesheets/style3.css')
+	link(rel='stylesheet', href='/stylesheets/parallax.css')
+	link(rel='stylesheet', href='/stylesheets/minicolors/jquery.miniColors.css')
+	link(rel='stylesheet', href='/stylesheets/bichitos/bichitos.css')
+	link(rel='stylesheet', href='/stylesheets/bichitos/parallax.css')
+
+block scripts
+	script(src='//code.jquery.com/jquery-1.10.2.min.js')
+	script(src='http://localhost:3000/socket.io/socket.io.js')
+	script(src='/javascripts/parallax.js')
+	script(src='/javascripts/minicolors/jquery.miniColors.js')
+	script(src='/javascripts/parallaxNJS.js')
+
+block content
+	body#body_parallax
+
+		<!-- Menu de opciones -->
+		nav#nav_parallax
+			a#nav-logo
+				img(src='/images/cele/logo.png')
+			
+			ul#ul_parallax
+				<!-- menu disenio -->		
+				li.nav-item
+					a(href="#disenio").nav_a_parallax
+						img(src='/images/cele/botones/disenio.png').menu_parallax
+
+				<!-- menu sistemas -->
+				li.nav-item
+					a(href="#sistemas").nav_a_parallax
+						img(src='/images/cele/botones/software.png').menu_parallax
+				
+				<!-- menu electronica -->
+				li.nav-item
+					a(href="#electronica").nav_a_parallax
+						img(src='/images/cele/botones/hardware.png').menu_parallax
+
+				<!-- menu cultura libre -->
+				li.nav-item
+					a(href="#culturaLibre").nav_a_parallax
+						img(src='/images/cele/botones/culturalibre.png').menu_parallax
+				
+		<!-- Parallax -->
+		div.back
+			div.back
+				div.middleback
+					div.middlefront
+						div.logo
+		
+			<!-- Contenido principal -->
+			div#content_parallax
+
+				<!-- contenido disenio -->			
+				section#disenio
+					header.header_parallax
+						img(src='/images/cele/columna.png').columna
+						
+						<!-- Lienzo para pintar el fondo de la estructura de disenio -->
+						canvas(width="600px" height="500px")#lienzo1
+						img(src='/images/cele/estructura.png')#estructura
+						img(src='/images/cele/herramientas.png')#herramientas
+									
+				<!-- contenido sistemas-->
+				section#sistemas
+					header.header_parallax
+						img(src='/images/cele/columna3.png').columna
+						
+						<!-- Lienzo para pintar el fondo de la estructura de sistemas-->
+						canvas(width="600px" height="620px")#lienzo2
+						img(src='/images/cele/estructura.png')#estructura2
+						img(src='/images/cele/antena.gif')#antena
+
+				<!-- contenido electronica-->
+				section#electronica
+					header.header_parallax
+						img(src='/images/cele/columna3.png').columna
+						
+						<!-- Lienzo para pintar el fondo de la estructura de electronica-->
+						canvas(width="600px" height="620px")#lienzo3
+						img(src='/images/cele/columna2.png').columna
+						img(src='/images/cele/estructura.png')#estructura3
+						img(src='/images/cele/otrolado.gif')#lineasOtroLado
+				
+				<!-- contenido cultura libre-->
+				section#culturaLibre
+					header.header_parallax
+						img(src='/images/cele/columna3.png').columna
+						
+						<!-- Lienzo para pintar el fondo de la estructura de cultura libre-->
+						canvas(width="600px" height="620px")#lienzo4
+						img(src='/images/cele/columna4.png').columna
+						img(src='/images/cele/estructura.png')#estructura4
+						img(src='/images/cele/acuarela.png')#acuarela
+
+		<!-- Cuadrados de selección del color de las estructuras -->
+		div
+			each bichito in [1, 2, 3, 4]
+				div(id="colorido#{bichito}")
+					input(type="hidden" id="#{bichito}").colorSelector
