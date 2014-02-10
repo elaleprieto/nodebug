@@ -4,9 +4,20 @@
  */
 var Bichitos = require('../models/bichitos');
 
+exports.index = function(req, res) {
+	Bichitos.find(function (error, bichitos) {
+  		res.render('bichitos/index', {title: 'Listado', bichitos: bichitos});
+	})
+};
+
+exports.list = function(req, res) {
+	Bichitos.find(function (error, bichitos) {
+  		res.send(bichitos);
+	})
+};
+
 exports.parallax = function(req, res) {
 	Bichitos.find(function (error, bichitos) {
-		console.log(bichitos);
   		res.render('parallax', {title: 'Parallax', bichitos: bichitos});
 	})
 };

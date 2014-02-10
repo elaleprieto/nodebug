@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/cake.generic.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+		block css
+	body(data-ng-app="App")
+		div#container
+			header.span2
+				div.inner.cf
+					h1.alt.span1.head
+						img(alt="bichiLogo", src="/images/bug128.png").bug
+						| LibreLEDs :: Bichitos Libres
+					nav.span1.col
+						ul.cf
+							li
+								a(href="/bichitos").alt
+									| Inicio
+							li
+								a(href="/accionar").alt
+									| Accionar
+							li
+								a(href="/colorear").alt
+									| Colorear
+							li
+								a(href="/direccionar").alt
+									| Direccionar
+							li
+								a(href="/parallax").alt
+									| Parallax
+			div#content.cf
+				block content
+
+		script(src='//code.jquery.com/jquery-1.10.2.min.js')
+		script(src='http://localhost:3000/socket.io/socket.io.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js')
+		script(src='http://code.angularjs.org/1.2.11/angular-resource.min.js')
+		script(src='/javascripts/app.js')
+		script(src='/javascripts/socket.js')
+		script(src='/javascripts/directives.js')
+		block scripts

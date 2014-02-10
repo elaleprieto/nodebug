@@ -62,7 +62,8 @@ app.disable('view cache');
 app.set('view cache', 'disable');
 app.set('view cache', false);
 
-app.get('/', routes.index);
+app.get('/', bichitos.index);
+app.get('/bichitos', bichitos.list);
 app.get('/parallax', bichitos.parallax);
 // app.get('/parallax', function(req, res) {
 // 	Bichitos.find({}, function (error, bichitos) {

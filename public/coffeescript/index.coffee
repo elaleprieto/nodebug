@@ -1,7 +1,8 @@
 jQuery ->
 	window.App = {}
 	# App.ws = io.connect('/')
-	window.App.ws = io.connect('http://192.168.10.104:3000/')
+	# window.App.ws = io.connect('http://192.168.10.104:3000/')
+	window.App.ws = io.connect('http://localhost:3000/')
 
 	# App.ws.on 'ready', () ->
 		# console.log 'WebSockets Listos!'
@@ -15,6 +16,13 @@ jQuery ->
       colorBox = $('.selector[data-id="' + data.element + '"] > a')
       console.log rgb2hexNode(data.rgb.r, data.rgb.g, data.rgb.b)
       $(colorBox).css('backgroundColor', rgb2hexNode(data.rgb.r, data.rgb.g, data.rgb.b))
+
+      # colorBox = $('.selector[data-id="' + data.element + '"] > a')
+      # $(colorBox).css('backgroundColor', rgb2hexNode(data.rgb.r, data.rgb.g, data.rgb.b))
+      
+      console.log colorBox
+      # # actualizarValores($('input[id="' + data.element + '"]'), data.rgb)
+      # actualizarBichito(data)
 
 window.broadcastChange = (element, rgb) ->
 	window.App.ws.emit('colorChanged', {element: element, rgb: rgb})

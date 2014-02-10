@@ -64,7 +64,6 @@ SUS.new = function(newData, callback){
 
 Bichitos.find = function(callback){
 	Bichitos.find({}, function (error, bichitos) {
-		console.log(bichitos);
 		if(error){
 			callback(error)
 		}else{
