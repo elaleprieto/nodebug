@@ -2,7 +2,7 @@ jQuery ->
 	window.App = {}
 	# App.ws = io.connect('/')
 	# window.App.ws = io.connect('http://192.168.10.104:3000/')
-	window.App.ws = io.connect('http://localhost:3000/')
+	window.App.ws = io.connect('http://localhost:3001/')
 
 	# App.ws.on 'ready', () ->
 		# console.log 'WebSockets Listos!'

@@ -359,7 +359,7 @@ if(jQuery) (function($) {
 				// Fire change callback
 				if( input.data('change') ) {
 					if( hex === input.data('lastChange') ) return;
-					if((event.type == 'mouseup') || (event.type == 'touchend')) {
+					if((event !== undefined) && ((event.type == 'mouseup') || (event.type == 'touchend'))) {
 						input.data('change').call(input.get(0), '#' + hex, hsb2rgb(hsb));
 						input.data('lastChange', hex);
 					}

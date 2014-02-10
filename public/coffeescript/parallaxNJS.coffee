@@ -1,6 +1,6 @@
 jQuery ->
 	window.App = {}
-	window.App.ws = io.connect('http://localhost:3000/')
+	window.App.ws = io.connect('http://localhost:3001/')
 
 	window.App.ws.on 'colorChanged', (data) ->
       colorBox = $('.selector[data-id="' + data.element + '"] > a')

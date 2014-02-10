@@ -22,17 +22,9 @@ Directives.directive 'colorSelector', ['$rootScope', ($rootScope) ->
 					# scope.socket.emit 'cambiarColor', scope.bichito, rgb
 			})
 
-			scope.$watch 'bichito', (bichito) ->
-				# console.log element
+			scope.$watch 'bichito', ->
 				if element?
-					element.miniColors('value', 'ff9900')
-				# element.miniColors({
-				# 	change : (hex, rgb) ->
-				# 		$(element).css('backgroundColor', '#' + hex);
-				# 		# cambiarColor(element, rgb);
-				# 		scope.cambiarColor(scope.bichito, rgb)
-				# 		# scope.socket.emit 'cambiarColor', scope.bichito, rgb
-				# })
+					element.miniColors('value', rgb2hex(attrs.value))
 			, true
 
 	}

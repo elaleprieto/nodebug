@@ -5,7 +5,7 @@
 # App.factory 'socket', ['$rootScope', ($rootScope) ->
 angular.module("App").factory 'socket', ['$rootScope', ($rootScope) ->
 	
-	socket = io.connect('http://localhost:3000/')
+	socket = io.connect('http://localhost:3001/')
 	# socket = io.connect('http://node01.com:3001/')
 	# socket = io.connect('http://elefe.com:3001/')
 	# socket = io.connect('http://192.168.40.2:3001/')

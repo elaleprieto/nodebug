@@ -20,9 +20,9 @@
               return scope.cambiarColor(scope.bichito, rgb);
             }
           });
-          return scope.$watch('bichito', function(bichito) {
+          return scope.$watch('bichito', function() {
             if (element != null) {
-              return element.miniColors('value', 'ff9900');
+              return element.miniColors('value', rgb2hex(attrs.value));
             }
           }, true);
         }

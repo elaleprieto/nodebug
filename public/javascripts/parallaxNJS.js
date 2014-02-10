@@ -3,7 +3,7 @@
 
   jQuery(function() {
     window.App = {};
-    window.App.ws = io.connect('http://localhost:3000/');
+    window.App.ws = io.connect('http://localhost:3001/');
     return window.App.ws.on('colorChanged', function(data) {
       var colorBox;
       colorBox = $('.selector[data-id="' + data.element + '"] > a');
