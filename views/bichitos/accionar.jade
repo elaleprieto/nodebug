@@ -1,0 +1,61 @@
+extends ../layouts/default
+
+block css
+	//- link(rel='stylesheet', href='/stylesheets/style3.css')
+	link(rel='stylesheet', href='/stylesheets/bichitos/bichitos.css')
+	//- link(rel='stylesheet', href='/stylesheets/parallax.css')
+	link(rel='stylesheet', href='/stylesheets/minicolors/jquery.miniColors.css')
+	//- link(rel='stylesheet', href='/stylesheets/bichitos/parallax.css')
+	link(rel='stylesheet', href='/stylesheets/bichitos/index.css')
+
+block scripts
+	script(src='/javascripts/bichitos_model.js')
+	script(src='/javascripts/bichitos_controller.js')
+	script(src='/javascripts/bichitos.js')
+	//- script(src='/javascripts/parallax.js')
+	script(src='/javascripts/minicolors/jquery.miniColors.js')
+	//- script(src='/javascripts/parallaxNJS.js')
+	script(src='/javascripts/index.js')
+
+block content
+	div(data-ng-controller="BichitosController").bichitos.index
+		h2 Bichitos
+		table(cellpadding="0" cellspacing="0")
+			thead
+				tr
+					th Orden
+					th Dirección
+					th Estado
+					th Rojo
+					th Verde
+					th Azul
+					th Acciones
+
+
+			//- each bichito in bichitos
+			//- 	tr(title="#{bichito.id}")
+			//- 		td #{bichito.id}
+			//- 		td #{bichito.direccion}
+			//- 		td #{bichito.estado}
+			//- 		td(title="rojo") #{bichito.intensidadRojo}
+			//- 		td(title="verde") #{bichito.intensidadVerde}
+			//- 		td(title="azul") #{bichito.intensidadAzul}
+			//- 		td(title="potenciaRojo") #{bichito.potenciaRojo}
+			//- 		td(title="potenciaVerde") #{bichito.potenciaVerde}
+			//- 		td(title="potenciaAzul") #{bichito.potenciaAzul}
+			//- 		td(title="potenciaTotal") #{bichito.potenciaTotal}
+			//- 		td.selector
+			//- 			input(type="hidden" data-id="#{bichito.id}" id="#{bichito.id}" value="rgb(#{bichito.intensidadRojo}, #{bichito.intensidadVerde}, #{bichito.intensidadAzul})").colorSelector
+			
+			tbody
+				tr(data-ng-repeat="bichito in bichitos")
+					td(data-ng-bind="bichito.orden")
+					td(data-ng-bind="bichito.direccion")
+					td(data-ng-bind="bichito.estado")
+					td(data-ng-bind="bichito.intensidadRojo")
+					td(data-ng-bind="bichito.intensidadVerde")
+					td(data-ng-bind="bichito.intensidadAzul")
+					td
+						button(class="btn" data-ng-click="encender(bichito)") Accionar
+						button(class="btn" data-ng-click="apagar(bichito)") Apagar
+
