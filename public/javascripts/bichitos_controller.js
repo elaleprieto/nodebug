@@ -8,6 +8,12 @@
   angular.module("App").controller('BichitosController', [
     '$scope', '$http', '$timeout', 'socket', 'Bichito', function($scope, $http, $timeout, socket, Bichito) {
       $scope.bichitos = Bichito.query();
+      $scope.apagar = function(bichito) {
+        return socket.emit('apagar', bichito);
+      };
+      $scope.encender = function(bichito) {
+        return socket.emit('encender', bichito);
+      };
 
       /*
       	 * Se calcula la Potencia a partir de la Intensidad actual.

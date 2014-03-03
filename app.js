@@ -16,7 +16,8 @@ var cache = {};
 // var objectId = {};
 // var Bichitos = {};
 // var schema = {};
-var websockets = require('./lib/ws');
+// var websockets = require('./lib/ws');
+var websockets = require('./libs/websockets');
 
 var app = express();
 
@@ -63,6 +64,7 @@ app.set('view cache', 'disable');
 app.set('view cache', false);
 
 app.get('/', bichitos.index);
+app.get('/accionar', bichitos.accionar);
 app.get('/bichitos', bichitos.list);
 app.get('/parallax', bichitos.parallax);
 // app.get('/parallax', function(req, res) {

@@ -23,6 +23,13 @@ module.exports = (grunt) ->
 					# #'path/to/another.js': ['path/to/sources/*.coffee', 'path/to/more/*.coffee'] # compile and concat into single file
 				# }
 			# }
+			libs: {
+				files: {
+					# 'js/.js': 'path/to/source.coffee', # 1:1 compile
+					'../libs/websockets.js': '../libs/websockets.coffee' # 1:1 compile
+					#'path/to/another.js': ['path/to/sources/*.coffee', 'path/to/more/*.coffee'] # compile and concat into single file
+				}
+			}
 			glob_to_multiple: {
 				expand: true,
 				cwd: 'coffeescript/',
@@ -52,6 +59,10 @@ module.exports = (grunt) ->
 				files: ['coffeescript/**/*.coffee'],
 				tasks: ['coffee'],
 			}
+			libs: {
+				files: ['../libs/**/*.coffee'],
+				tasks: ['coffee:libs'],
+			}
 		}
 	})
 
@@ -65,3 +76,4 @@ module.exports = (grunt) ->
 	# Default task(s).
 	# grunt.registerTask('default', ['uglify'])
 	grunt.registerTask('default', ['watch'])
+	grunt.registerTask('libs', ['coffee:libs'])

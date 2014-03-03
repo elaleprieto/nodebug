@@ -7,6 +7,13 @@ angular.module("App").controller 'BichitosController'
 
 	$scope.bichitos = Bichito.query()
 
+	$scope.apagar = (bichito) ->
+		socket.emit 'apagar', bichito
+
+	$scope.encender = (bichito) ->
+		socket.emit 'encender', bichito
+
+
 	###
 	 * Se calcula la Potencia a partir de la Intensidad actual.
 	 * Se toma como potencia base 3 watts correspondiente a un dimmerizado de 255.
